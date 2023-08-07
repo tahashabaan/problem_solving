@@ -1,4 +1,4 @@
-88. Merge Sorted Array  => solution  =>
+88.firstProblem::::: Merge Sorted Array  => solution  =>
 89.  public void merge(int[] nums1, int m, int[] nums2, int n) {
        int i= m-1; 
        int j = n-1; 
@@ -13,4 +13,19 @@
            }
        }
      }
+     /************************************************************************/
+     second  problem => 
+     27. Remove Element => solution =>
+      public int removeElement(int[] nums, int val) {
+      int k=0; 
+      for (int i=0; i<nums.length; i++){
+          if (nums[i] != val){
+              nums[k] = nums[i];
+              k++;
+          }
+      }
+      return k;
+    }
+         /************************************************************************/
+
 
