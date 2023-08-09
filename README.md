@@ -46,8 +46,28 @@ third problem =>
         }
     }
    return candidate;
-
  }
          /************************************************************************/
+fourth problem => . Best Time to Buy and Sell Stock => solution=>
+    public int maxProfit(int[] prices) {
+        int max_profit = 0;
+        int min_price =Integer.MAX_VALUE;
+        int sp =0; // sold price equal diferrence between 
+        
+        // 7,6,4,3,1
+        for(int price: prices){
+          
+            if(price<min_price){
+                min_price = price;
+            }
+            sp = price-min_price;
+            if (max_profit < sp) 
+                max_profit = sp;
+        }
+        return max_profit;
+    }
+
+
+         
 
 
