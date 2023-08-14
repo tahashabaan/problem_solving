@@ -67,6 +67,33 @@ fourth problem => . Best Time to Buy and Sell Stock => solution=>
         return max_profit;
     }
 
+         /************************************************************************/
+PRoblem%5
+80. Remove Duplicates from Sorted Array II => soul =>
+public int removeDuplicates(int[] nums) {
+    if (nums.length == 0) {
+        return 0; // If the array is empty, no duplicates to remove
+    }
+    
+    int count = 1; // Start the count at 1 since the first element is always unique
+    int k = 1; // Maintain a separate index for the updated array
+    
+    for (int i = 1; i < nums.length; i++) {
+        if (nums[i] == nums[i - 1]) {
+            count++;
+        } else {
+            count = 1;
+        }
+        
+        if (count <= 2) { // Allow at most 2 duplicates
+            nums[k] = nums[i]; // Move unique element to the updated array
+            k++;
+        }
+    }
+    
+    return k;
+}
+
 
          
 
