@@ -19,5 +19,16 @@ from Cinema
 where id % 2 <> 0 and description != 'boring'
 order by rating desc
 ```
+[627. swap-salary](https://leetcode.com/problems/swap-salary/)
+#### 2 -> solution: 627. swap-salary
+```
+update Salary
+set sex = 
+case
+ when sex = 'f'  THEN 'm'
+ else  'f'
+end;
+```
+
 
 
