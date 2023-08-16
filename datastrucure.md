@@ -102,8 +102,35 @@ public int removeDuplicates(int[] nums) {
     
     return k;
 }
+## 189. Rotate Array
+sol: 189. Rotate Array
+```
+private void swap(int nums [], int start, int end){
+            while(start < end){
+               int swap= nums[start];
+               nums[start] = nums[end];
+               nums[end] =swap;
+               start++;
+               end--;
+            }
+        }
+
+public void rotate(int[] nums, int k) {
+      k= k%nums.length; // k=3
+      swap(nums, 0, nums.length - 1);
+      swap(nums, 0, k - 1);
+      swap(nums,k, nums.length - 1);
+
+       
+        }
 
 ```
+At first, I used a method called a swap to use three times
+1-to swap between left and right
+2-to swap left with self
+3- to swap right with self
+
+
 
          
 
