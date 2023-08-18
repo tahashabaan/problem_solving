@@ -29,6 +29,27 @@ case
  else  'f'
 end;
 ```
+[1050. Actors and Directors Who Cooperated At Least Three Times](https://leetcode.com/problems/actors-and-directors-who-cooperated-at-least-three-times/description/)
+
+### solution1:
+```--select actor_id, director_id
+-- from ActorDirector a
+-- where a.timestamp = (
+--        select a.timestamp   
+--        from ActorDirector a
+--        group by actor_id, director_id
+--        having count(actor_id) >2 and count(director_id) > 2
+-- ) 
+```
+### solution2:
+````select actor_id, director_id
+    from ActorDirector a
+    group by actor_id, director_id
+    having(timestamp) >= 3
+```
+
+
+
 
 
 
