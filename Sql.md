@@ -50,6 +50,16 @@ end;
     having(timestamp) >= 3
 ```
 
+[1075. Project Employees I](https://leetcode.com/problems/project-employees-i/description/)
+
+### solution
+```
+SELECT project_id, ROUND(avg(experience_years) , 2) AS average_years
+FROM Employee e
+INNER JOIN Project p ON e.employee_id = p.employee_id
+GROUP BY project_id;
+```
+
 
 
 
