@@ -42,7 +42,7 @@ end;
 -- ) 
 ```
 ### solution2:
-````select actor_id, director_id
+```select actor_id, director_id
     from ActorDirector a
     group by actor_id, director_id
     having(timestamp) >= 3
