@@ -32,7 +32,8 @@ end;
 [1050. Actors and Directors Who Cooperated At Least Three Times](https://leetcode.com/problems/actors-and-directors-who-cooperated-at-least-three-times/description/)
 
 ### solution1:
-```--select actor_id, director_id
+```
+--select actor_id, director_id
 -- from ActorDirector a
 -- where a.timestamp = (
 --        select a.timestamp   
@@ -42,7 +43,8 @@ end;
 -- ) 
 ```
 ### solution2:
-```select actor_id, director_id
+```
+select actor_id, director_id
     from ActorDirector a
     group by actor_id, director_id
     having(timestamp) >= 3
