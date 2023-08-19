@@ -130,6 +130,25 @@ At first, I used a method called a swap to use three times
 2-to swap left with self
 3- to swap right with self
 
+## 55. Jump Game
+[55. Jump Game](https://leetcode.com/problems/jump-game/description/?envType=study-plan-v2&envId=top-interview-150)
+#### sol:
+```
+ public boolean canJump(int[] nums) {
+         
+ 
+         int pos=nums.length-1;
+         
+         
+         for (int i=nums.length-2; i>=0; i--){  
+            if (i + nums[i] >=pos) pos=i;
+         }
+      
+         
+         return pos==0;
+    }
+```
+
 
 
          
