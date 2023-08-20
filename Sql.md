@@ -69,6 +69,16 @@ group by s.product_id
 having min(s.sale_date) >='2019-01-01' and 
 max(s.sale_date) <= '2019-03-31'
 ```
+[1141. User Activity for the Past 30 Days I](https://leetcode.com/problems/user-activity-for-the-past-30-days-i/description/)
+### solution:
+```
+select activity_date as day,
+count(DISTINCT user_id) as active_users  
+ from  Activity 
+ group by activity_date 
+having min(activity_date) >= '2019-06-28' 
+and max(activity_date) <= '2019-07-27'
+```
 
 
 
