@@ -80,6 +80,15 @@ having min(activity_date) >= '2019-06-28'
 and max(activity_date) <= '2019-07-27'
 ```
 
+[1148. Article Views I](https://leetcode.com/problems/article-views-i/description/)
+### solution:
+```
+select distinct author_id as id 
+from Views v
+where v.author_id = v.viewer_id 
+order by id asc
+```
+
 
 
 
