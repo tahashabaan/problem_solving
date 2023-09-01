@@ -89,6 +89,17 @@ where v.author_id = v.viewer_id
 order by id asc
 ```
 
+[1407. Top Travellers](https://leetcode.com/problems/top-travellers/description/?envType=daily-question&envId=2023-09-01)
+### Solution:
+```
+select U.name ,
+isnull(sum(distance ), 0) as travelled_distance
+from Rides R Right join Users U
+on U.id = R.user_id
+group by R.user_id, U.name
+order by travelled_distance desc , U.name asc
+```
+
 
 
 
