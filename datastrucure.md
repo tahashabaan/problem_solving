@@ -184,7 +184,21 @@ while(list2 != null){
 return list.next;
     } 
 ```
+[141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/submissions/?envType=study-plan-v2&envId=top-interview-150)
 
+```
+public boolean hasCycle(ListNode head) {
+       ListNode first = head;
+       ListNode last = head;
+         while (first !=null && first.next !=null){
+           last = last.next;
+           first= first.next.next;
+           if(last == first ) return true;
+
+         }
+         return false;
+    }
+```
 
 
          
