@@ -184,6 +184,7 @@ while(list2 != null){
 return list.next;
     } 
 ```
+
 [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/submissions/?envType=study-plan-v2&envId=top-interview-150)
 
 ```
