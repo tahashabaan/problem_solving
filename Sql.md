@@ -100,6 +100,15 @@ group by R.user_id, U.name
 order by travelled_distance desc , U.name asc
 ```
 
+[1378. Replace Employee ID With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/)
+
+### Solution:
+```
+elect eI.unique_id , e.name
+from Employees e left join EmployeeUNI eI 
+on e.id = eI.id
+```
+
 
 
 
