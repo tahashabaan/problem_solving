@@ -108,6 +108,15 @@ elect eI.unique_id , e.name
 from Employees e left join EmployeeUNI eI 
 on e.id = eI.id
 ```
+[1587. Bank Account Summary II](https://leetcode.com/problems/bank-account-summary-ii/)
+
+```
+select name as NAME, sum(amount) as BALANCE  
+from  Users u inner join Transactions t
+on u.account= t.account
+group by t.account, u.name
+having sum(amount) >= 10000
+```
 
 
 
