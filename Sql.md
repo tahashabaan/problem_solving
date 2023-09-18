@@ -109,7 +109,6 @@ from Employees e left join EmployeeUNI eI
 on e.id = eI.id
 ```
 [1587. Bank Account Summary II](https://leetcode.com/problems/bank-account-summary-ii/)
-
 ```
 select name as NAME, sum(amount) as BALANCE  
 from  Users u inner join Transactions t
