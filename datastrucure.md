@@ -181,7 +181,7 @@ while(list2 != null){
 }
 
 
-return list.next;
+return list. next;
     } 
 ```
 
@@ -201,6 +201,37 @@ public boolean hasCycle(ListNode head) {
     }
 ```
 
+[206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)
+```
+//   Definition for singly-linked list.
+//   struct ListNode {
+//       int val;
+//       ListNode *next;
+//       ListNode() : val(0), next(nullptr) {}
+//       ListNode(int x) : val(x), next(nullptr) {}
+//       ListNode(int x, ListNode *next) : val(x), next(next) {}
+//   };
+
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+
+        /*
+        steps =>
+        1-declare previous list then iterate on the list 
+        2-reverse each node in the list
+        */
+         ListNode *prev=nullptr;
+         while(head){
+             ListNode *temp=head;
+             head=head->next;
+             temp ->next=prev;
+             prev=temp;
+         }
+         return prev;
+    }
+ 
+};```
 
          
 
