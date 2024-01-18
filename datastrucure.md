@@ -231,7 +231,43 @@ public:
          return prev;
     }
  
-};```
+};
+```
+/********************************************?/
+
+[141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/description/)
+### description
+using two pointers first slow by one step second fast two-step  when two pointers refer to the same node it cycle
+```
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        // بسة اللح الرحمت الرحسم
+        if(!head  || !head->next)  return false;
+        // if(head && head->next) return true;
+        // ListNode *fast=head;
+        // two-pointer to check it exists in the same point
+        ListNode *fast=head;
+        // ListNode *ptr=head;
+        while(fast && fast->next){
+             head=head->next;
+             fast = fast->next->next;
+            if(fast == head) return true;
+            //  slow=slow->next;
+        }
+         
+        return false;// how solve it ?  => 
+    }
+};;```
+
 
          
 
