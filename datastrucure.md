@@ -302,6 +302,39 @@ public:
 };```
 
 
+/**********************************************************************/
+
+[5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/description/)
+
+```class Solution {
+public:
+    int countSubstrings(string s) {
+        int n=s.length();
+        if(n<=1) return 1;
+        int cnt=0;
+     for(int i=0; i<n; i++){
+        for(int j=i+1; j<=n; j++){
+            std ::string sub=s.substr(i, j-i);
+            if(isPalind(sub)) cnt++;
+       }
+}
+   return cnt;
+
+    }
+
+
+    bool isPalind(std :: string &str){
+        int right=str.length()-1;
+        int left=0;
+        while(left<right){
+            if(str[right] != str[left]) return false;
+             right--, left++;
+        }
+        return true;
+    }
+};```
+
+
 
          
 
