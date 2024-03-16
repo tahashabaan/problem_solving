@@ -335,7 +335,49 @@ public:
     }
 };
 ```
+[2981. Find Longest Special Substring That Occurs Thrice I](https://leetcode.com/problems/find-longest-special-substring-that-occurs-thrice-i/description/)
+```class Solution {
 
+private:
+bool sepcial(string& s) {
+    int n = s.length();
+    if (n <= 1) return true;
+    for (int i = 0; i < n - 1; i++) {
+        if (s[i] != s[i + 1]) return false;
+    }
+    return true;
+}
+
+public:
+    int maximumLength(string s) {
+    int n = s.length();
+    std::map<std::string, int> sets;
+    
+    for (int i = 0; i < n; i++) {
+        for (int r = i + 1; r <= n; r++) {
+            std::string sub = s.substr(i, r - i);
+            if (sepcial(sub)) {
+                sets[sub]++;
+            }
+        }
+    }
+
+    int maxLen = -1;
+    for (auto set : sets) 
+    {
+        int count = set.second;
+        int str = set.first.length();
+        if (count >= 3) {
+            maxLen = max(maxLen, str);
+        }
+       
+    }
+
+    return maxLen;
+}
+
+};
+```
 
 
          
