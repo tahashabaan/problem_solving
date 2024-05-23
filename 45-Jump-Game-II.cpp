@@ -7,8 +7,12 @@ public:
         // else if(nums[0] >= goal) return 1;
         for(int i=0; i<n; i++)
            { 
-              jumb = max(jumb, i+nums[i]);
-              if(jumb >= goal) {
+
+
+               //Get a large jump 
+              jump = max(jump, i+nums[i]);
+               // reach the last number in the array break program with increase answer
+              if(jump >= goal) {
                 cnt++; break;
               }
                
